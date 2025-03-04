@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Zap, Leaf, Scale, ArrowsUpDown } from 'lucide-react';
+import { Zap, Leaf, Scale, ArrowUpDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const ReasonCard = ({ 
@@ -86,7 +86,7 @@ const Reasons = () => {
           />
           <ReasonCard 
             number="04"
-            icon={<ArrowsUpDown size={28} />}
+            icon={<ArrowUpDown size={28} />}
             title="Asynchronous Processing"
             description="Transactions are processed independently and asynchronously, allowing the network to scale efficiently while maintaining high throughput and low latency."
             delay="300ms"
