@@ -173,7 +173,7 @@ const GrowthChart = () => {
           </div>
           <div className="glass-card rounded-xl p-6 text-center transition-all hover:shadow-xl animate-slide-up" style={{ animationDelay: '200ms' }}>
             <h3 className="text-lg font-medium text-crypto-charcoal/70 mb-2">Transaction Speed</h3>
-            <p className="text-3xl font-bold text-green-500">< 1 sec</p>
+            <p className="text-3xl font-bold text-green-500">&lt; 1 sec</p>
           </div>
           <div className="glass-card rounded-xl p-6 text-center transition-all hover:shadow-xl animate-slide-up" style={{ animationDelay: '300ms' }}>
             <h3 className="text-lg font-medium text-crypto-charcoal/70 mb-2">Transaction Fees</h3>
