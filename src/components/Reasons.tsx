@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Shield, TrendingUp, DollarSign, Lock } from 'lucide-react';
+import { Zap, Leaf, Scale, ArrowsUpDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const ReasonCard = ({ 
@@ -48,11 +48,11 @@ const Reasons = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16 animate-slide-up">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-4">
-            <span className="text-sm font-medium text-crypto-charcoal">Hidden Reasons</span>
+            <span className="text-sm font-medium text-crypto-charcoal">Technical Advantages</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-crypto-charcoal mb-4">The Secret Behind Its Success</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-crypto-charcoal mb-4">The Secret Behind Nano's Success</h2>
           <p className="text-lg text-crypto-charcoal/70 max-w-2xl mx-auto">
-            Understand the fundamental factors that drive this cryptocurrency's exceptional performance in the market.
+            Understand the fundamental technological innovations that make Nano one of the most efficient cryptocurrencies in the world.
           </p>
           <p className="dir-rtl mt-4 text-lg text-crypto-charcoal/80 font-arabic">
             الاسباب الخفية
@@ -62,33 +62,33 @@ const Reasons = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <ReasonCard 
             number="01"
-            icon={<Shield size={28} />}
-            title="No Mining Structure"
-            description="Unlike traditional cryptocurrencies, this one doesn't require energy-intensive mining operations, making it more sustainable and environmentally friendly."
+            icon={<Leaf size={28} />}
+            title="Block-Lattice Architecture"
+            description="Unlike blockchain, Nano uses a block-lattice structure where each account has its own blockchain, eliminating mining and drastically reducing energy consumption."
             arabicText="لا يوجد بها تعدين"
             delay="0ms"
           />
           <ReasonCard 
             number="02"
-            icon={<TrendingUp size={28} />}
-            title="Market Exclusivity"
-            description="Its unique structure ensures it cannot be replaced by other currencies in the market, creating a natural scarcity that drives value."
+            icon={<Zap size={28} />}
+            title="Open Representative Voting"
+            description="Nano uses a lightweight consensus mechanism called ORV (Open Representative Voting) instead of mining or staking, enabling instant transaction confirmations."
             arabicText="اي انه لا ممكن الحصول ع عملات غيرها بالسوق"
             delay="100ms"
           />
           <ReasonCard 
             number="03"
-            icon={<DollarSign size={28} />}
-            title="Inflation Resistant"
-            description="The currency is designed to be immune to inflation, preserving its value over time even as fiat currencies depreciate."
+            icon={<Scale size={28} />}
+            title="Pre-Mined Supply"
+            description="All 133.2 million Nano coins are already in circulation with no mining, inflation, or additional issuance, ensuring long-term value preservation."
             arabicText="ولا تتضخم"
             delay="200ms"
           />
           <ReasonCard 
             number="04"
-            icon={<Lock size={28} />}
-            title="Value-Driven Growth"
-            description="Instead of relying on hype or endorsements, this cryptocurrency grows based on its inherent utility and technological advantages."
+            icon={<ArrowsUpDown size={28} />}
+            title="Asynchronous Processing"
+            description="Transactions are processed independently and asynchronously, allowing the network to scale efficiently while maintaining high throughput and low latency."
             delay="300ms"
           />
         </div>

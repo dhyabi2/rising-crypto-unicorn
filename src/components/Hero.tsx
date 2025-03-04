@@ -21,15 +21,15 @@ const Hero = () => {
             <div className="w-full md:w-1/2 space-y-6 animate-slide-up">
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 border border-blue-100">
                 <TrendingUp className="w-4 h-4 text-crypto-blue mr-2" />
-                <span className="text-sm font-medium text-crypto-charcoal">Outperforming the market</span>
+                <span className="text-sm font-medium text-crypto-charcoal">Eco-friendly & Sustainable</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-crypto-charcoal tracking-tight">
-                A cryptocurrency with <span className="text-crypto-blue">unprecedented growth</span>
+                <span className="text-crypto-blue">Nano (XNO)</span>: The Future of Digital Money
               </h1>
               
               <p className="text-lg text-crypto-charcoal/80 max-w-xl">
-                Rising above other currencies despite no endorsements. Discover the hidden reasons behind this remarkable performance.
+                Instant, feeless, and eco-friendly transactions. Discover the cryptocurrency that uses minimal energy while delivering maximum performance.
               </p>
               
               <div className="dir-rtl mt-2 mb-6 text-xl text-crypto-charcoal/90 font-arabic font-medium">
@@ -38,7 +38,7 @@ const Hero = () => {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="bg-crypto-blue hover:bg-crypto-blue/90 text-white rounded-full px-8 py-6 text-lg font-medium shadow-lg shadow-blue-300/20 transition-all hover:shadow-xl hover:shadow-blue-300/30">
-                  Buy Now
+                  Get Nano
                 </Button>
                 <Button variant="outline" className="border-crypto-blue text-crypto-blue hover:bg-crypto-blue/5 rounded-full px-8 py-6 text-lg font-medium transition-all">
                   Learn More
@@ -53,18 +53,18 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-crypto-gold to-crypto-light-gold rounded-full blur-xl opacity-20 animate-pulse-subtle" />
                 <div className={cn(
                   "w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center",
-                  "bg-gradient-to-br from-crypto-gold to-crypto-light-gold",
-                  "shadow-2xl shadow-crypto-gold/20",
+                  "bg-gradient-to-br from-crypto-blue to-blue-400",
+                  "shadow-2xl shadow-crypto-blue/20",
                   "animate-float"
                 )}>
-                  <div className="text-white text-6xl md:text-7xl font-bold">CR</div>
+                  <div className="text-white text-6xl md:text-7xl font-bold">XNO</div>
                 </div>
                 
                 {/* Performance indicator */}
                 <div className="absolute -bottom-4 right-0 bg-white py-2 px-4 rounded-lg shadow-lg animate-slide-in-right">
                   <div className="flex items-center">
                     <TrendingUp className="w-5 h-5 text-green-500 mr-2" />
-                    <span className="font-medium text-crypto-charcoal">+147%</span>
+                    <span className="font-medium text-crypto-charcoal">Eco-friendly</span>
                   </div>
                 </div>
               </div>

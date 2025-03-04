@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Wallet, TrendingUp, Shield, Coins } from 'lucide-react';
+import { Zap, Globe, ArrowRight, Ban, Coins } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const FeatureCard = ({ 
@@ -48,37 +48,37 @@ const Features = () => {
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-4">
             <span className="text-sm font-medium text-crypto-charcoal">Unique Features</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-crypto-charcoal mb-4">Why This Currency Is Different</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-crypto-charcoal mb-4">Why Nano Is Different</h2>
           <p className="text-lg text-crypto-charcoal/70 max-w-2xl mx-auto">
-            Discover the unique properties that set this cryptocurrency apart from the market and drive its exceptional performance.
+            Discover the unique properties that set Nano apart from other cryptocurrencies and drive its exceptional performance.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           <FeatureCard 
-            icon={<Shield size={24} />}
-            title="No Mining Required"
-            description="Unlike other cryptocurrencies, this one doesn't rely on mining, making it more environmentally friendly."
+            icon={<Ban size={24} />}
+            title="Zero Fees"
+            description="Nano transactions are completely free, making it perfect for everyday transactions regardless of size."
             arabicText="لا يوجد بها تعدين اي انه لا ممكن الحصول ع عملات غيرها بالسوق"
             delay="0ms"
           />
           <FeatureCard 
-            icon={<TrendingUp size={24} />}
-            title="Consistent Growth"
-            description="Shows remarkable stability and growth even without celebrity endorsements or market manipulation."
+            icon={<Zap size={24} />}
+            title="Instant Transactions"
+            description="Transactions confirm in less than a second, making Nano one of the fastest cryptocurrencies available."
             delay="100ms"
           />
           <FeatureCard 
-            icon={<Coins size={24} />}
-            title="Limited Supply"
-            description="Fixed supply means no inflation risk, preserving and increasing value over time."
+            icon={<Globe size={24} />}
+            title="Eco-Friendly"
+            description="Uses minimal energy with no mining required, making it one of the most environmentally sustainable cryptocurrencies."
             arabicText="ولا تتضخم"
             delay="200ms"
           />
           <FeatureCard 
-            icon={<Wallet size={24} />}
-            title="Market Exclusivity"
-            description="Cannot be replaced by other currencies in the market, ensuring its long-term viability."
+            icon={<Coins size={24} />}
+            title="Fixed Supply"
+            description="All XNO coins are already in circulation (133.2M) with no inflation, ensuring long-term value stability."
             delay="300ms"
           />
         </div>

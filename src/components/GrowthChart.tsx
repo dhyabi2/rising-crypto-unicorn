@@ -3,44 +3,45 @@ import React, { useState } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { Button } from '@/components/ui/button';
 
-// Sample data for the chart
+// Nano (XNO) historical price data (representative values)
 const dailyData = [
-  { date: 'Jan 1', value: 1000 },
-  { date: 'Jan 5', value: 1200 },
-  { date: 'Jan 10', value: 1100 },
-  { date: 'Jan 15', value: 1300 },
-  { date: 'Jan 20', value: 1500 },
-  { date: 'Jan 25', value: 1400 },
-  { date: 'Jan 30', value: 1700 },
+  { date: 'Apr 1', value: 0.80 },
+  { date: 'Apr 5', value: 0.85 },
+  { date: 'Apr 10', value: 0.82 },
+  { date: 'Apr 15', value: 0.90 },
+  { date: 'Apr 20', value: 0.95 },
+  { date: 'Apr 25', value: 0.93 },
+  { date: 'Apr 30', value: 1.05 },
 ];
 
 const weeklyData = [
-  { date: 'Week 1', value: 1000 },
-  { date: 'Week 2', value: 1300 },
-  { date: 'Week 3', value: 1600 },
-  { date: 'Week 4', value: 2000 },
-  { date: 'Week 5', value: 2400 },
-  { date: 'Week 6', value: 2800 },
-  { date: 'Week 7', value: 3500 },
+  { date: 'Week 1', value: 0.80 },
+  { date: 'Week 2', value: 0.88 },
+  { date: 'Week 3', value: 0.92 },
+  { date: 'Week 4', value: 0.97 },
+  { date: 'Week 5', value: 1.05 },
+  { date: 'Week 6', value: 1.10 },
+  { date: 'Week 7', value: 1.18 },
 ];
 
 const monthlyData = [
-  { date: 'Jan', value: 1000 },
-  { date: 'Feb', value: 1800 },
-  { date: 'Mar', value: 2500 },
-  { date: 'Apr', value: 3000 },
-  { date: 'May', value: 3800 },
-  { date: 'Jun', value: 4500 },
-  { date: 'Jul', value: 5700 },
-  { date: 'Aug', value: 7000 },
+  { date: 'Jan', value: 0.75 },
+  { date: 'Feb', value: 0.82 },
+  { date: 'Mar', value: 0.90 },
+  { date: 'Apr', value: 1.05 },
+  { date: 'May', value: 1.15 },
+  { date: 'Jun', value: 1.10 },
+  { date: 'Jul', value: 1.20 },
+  { date: 'Aug', value: 1.18 },
 ];
 
 const yearlyData = [
-  { date: '2020', value: 1000 },
-  { date: '2021', value: 3000 },
-  { date: '2022', value: 7000 },
-  { date: '2023', value: 15000 },
-  { date: '2024', value: 25000 },
+  { date: '2019', value: 0.70 },
+  { date: '2020', value: 0.55 },
+  { date: '2021', value: 5.60 }, // Historical peak
+  { date: '2022', value: 0.85 },
+  { date: '2023', value: 1.10 },
+  { date: '2024', value: 1.20 },
 ];
 
 // Custom tooltip component
@@ -50,7 +51,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
       <div className="bg-white p-4 rounded-lg shadow-lg border border-gray-100">
         <p className="text-sm text-gray-500">{label}</p>
         <p className="text-lg font-medium text-crypto-blue">
-          ${payload[0].value.toLocaleString()}
+          ${payload[0].value.toFixed(2)}
         </p>
       </div>
     );
@@ -81,13 +82,13 @@ const GrowthChart = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 animate-slide-up">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-4">
-            <span className="text-sm font-medium text-crypto-charcoal">Consistent Growth</span>
+            <span className="text-sm font-medium text-crypto-charcoal">Sustainable Growth</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-crypto-charcoal mb-4">
-            Outperforming Major Currencies
+            Nano: Eco-Friendly Performance
           </h2>
           <p className="text-lg text-crypto-charcoal/70 max-w-2xl mx-auto">
-            Even without celebrity endorsements, this cryptocurrency has shown remarkable growth compared to major currencies in the market.
+            While many cryptocurrencies rely on energy-intensive mining and celebrity endorsements, Nano delivers real-world utility with minimal environmental impact.
           </p>
           <p className="dir-rtl mt-4 text-lg text-crypto-charcoal/80 font-arabic">
             على الرغم من ان ترمب لم يتكلم عنها لكنها تفوقت بالارتفاع
@@ -148,7 +149,7 @@ const GrowthChart = () => {
               <YAxis 
                 tick={{ fill: '#222222' }} 
                 axisLine={{ stroke: '#f0f0f0' }}
-                tickFormatter={(value) => `$${value}`}
+                tickFormatter={(value) => `$${value.toFixed(2)}`}
               />
               <Tooltip content={<CustomTooltip />} />
               <Area 
@@ -167,16 +168,16 @@ const GrowthChart = () => {
         {/* Comparison stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           <div className="glass-card rounded-xl p-6 text-center transition-all hover:shadow-xl animate-slide-up" style={{ animationDelay: '100ms' }}>
-            <h3 className="text-lg font-medium text-crypto-charcoal/70 mb-2">vs Bitcoin</h3>
-            <p className="text-3xl font-bold text-green-500">+37%</p>
+            <h3 className="text-lg font-medium text-crypto-charcoal/70 mb-2">Energy vs Bitcoin</h3>
+            <p className="text-3xl font-bold text-green-500">-99.9%</p>
           </div>
           <div className="glass-card rounded-xl p-6 text-center transition-all hover:shadow-xl animate-slide-up" style={{ animationDelay: '200ms' }}>
-            <h3 className="text-lg font-medium text-crypto-charcoal/70 mb-2">vs Ethereum</h3>
-            <p className="text-3xl font-bold text-green-500">+52%</p>
+            <h3 className="text-lg font-medium text-crypto-charcoal/70 mb-2">Transaction Speed</h3>
+            <p className="text-3xl font-bold text-green-500">< 1 sec</p>
           </div>
           <div className="glass-card rounded-xl p-6 text-center transition-all hover:shadow-xl animate-slide-up" style={{ animationDelay: '300ms' }}>
-            <h3 className="text-lg font-medium text-crypto-charcoal/70 mb-2">Market Rank</h3>
-            <p className="text-3xl font-bold text-crypto-blue">Top 10</p>
+            <h3 className="text-lg font-medium text-crypto-charcoal/70 mb-2">Transaction Fees</h3>
+            <p className="text-3xl font-bold text-crypto-blue">$0.00</p>
           </div>
         </div>
       </div>
