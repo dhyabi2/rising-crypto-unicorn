@@ -16,7 +16,7 @@ const Footer = () => {
               A revolutionary cryptocurrency with unique properties that drive unprecedented growth and market performance.
             </p>
             <p className="dir-rtl text-crypto-charcoal/80 font-arabic">
-              هذه العملة تستمر بالارتفاع على اكبر العملات
+              This currency continues to rise above the largest currencies
             </p>
           </div>
           

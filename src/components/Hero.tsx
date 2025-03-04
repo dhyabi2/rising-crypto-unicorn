@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { TrendingUp, ArrowUpRight } from "lucide-react";
@@ -33,7 +32,7 @@ const Hero = () => {
               </p>
               
               <div className="dir-rtl mt-2 mb-6 text-xl text-crypto-charcoal/90 font-arabic font-medium">
-                هذه العملة تستمر بالارتفاع على اكبر العملات على الرغم من ان ترمب لم يتكلم عنها لكنها تفوقت بالارتفاع
+                This currency continues to rise above the largest currencies despite Trump not mentioning it, but it has excelled in growth
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">

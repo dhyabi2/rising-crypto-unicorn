@@ -55,7 +55,7 @@ const Reasons = () => {
             Understand the fundamental technological innovations that make Nano one of the most efficient cryptocurrencies in the world.
           </p>
           <p className="dir-rtl mt-4 text-lg text-crypto-charcoal/80 font-arabic">
-            الاسباب الخفية
+            The Hidden Reasons
           </p>
         </div>
         
@@ -65,7 +65,7 @@ const Reasons = () => {
             icon={<Leaf size={28} />}
             title="Block-Lattice Architecture"
             description="Unlike blockchain, Nano uses a block-lattice structure where each account has its own blockchain, eliminating mining and drastically reducing energy consumption."
-            arabicText="لا يوجد بها تعدين"
+            arabicText="No mining required"
             delay="0ms"
           />
           <ReasonCard 
@@ -73,7 +73,7 @@ const Reasons = () => {
             icon={<Zap size={28} />}
             title="Open Representative Voting"
             description="Nano uses a lightweight consensus mechanism called ORV (Open Representative Voting) instead of mining or staking, enabling instant transaction confirmations."
-            arabicText="اي انه لا ممكن الحصول ع عملات غيرها بالسوق"
+            arabicText="Cannot obtain other market currencies"
             delay="100ms"
           />
           <ReasonCard 
@@ -81,7 +81,7 @@ const Reasons = () => {
             icon={<Scale size={28} />}
             title="Pre-Mined Supply"
             description="All 133.2 million Nano coins are already in circulation with no mining, inflation, or additional issuance, ensuring long-term value preservation."
-            arabicText="ولا تتضخم"
+            arabicText="Non-inflationary"
             delay="200ms"
           />
           <ReasonCard 

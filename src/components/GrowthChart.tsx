@@ -91,7 +91,7 @@ const GrowthChart = () => {
             While many cryptocurrencies rely on energy-intensive mining and celebrity endorsements, Nano delivers real-world utility with minimal environmental impact.
           </p>
           <p className="dir-rtl mt-4 text-lg text-crypto-charcoal/80 font-arabic">
-            على الرغم من ان ترمب لم يتكلم عنها لكنها تفوقت بالارتفاع
+            Despite not being mentioned by Trump, it has outperformed in growth
           </p>
         </div>
         

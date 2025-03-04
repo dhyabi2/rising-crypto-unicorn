@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -30,7 +29,7 @@ const CTA = () => {
                   Join millions of users worldwide who are already benefiting from Nano's instant, feeless transactions and sustainable approach to cryptocurrency.
                 </p>
                 <div className="dir-rtl mb-8 text-crypto-charcoal/80 font-arabic">
-                  هذه العملة تستمر بالارتفاع على اكبر العملات ولا يوجد بها تعدين
+                  This currency continues to rise above major currencies and has no mining
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-crypto-blue hover:bg-crypto-blue/90 text-white rounded-full px-8 py-6 text-lg font-medium shadow-lg hover:shadow-xl transition-all">
