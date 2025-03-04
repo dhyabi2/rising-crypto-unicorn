@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { TrendingUp, ArrowUpRight } from "lucide-react";
@@ -49,7 +50,7 @@ const Hero = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-crypto-gold to-crypto-light-gold rounded-full blur-xl opacity-20 animate-pulse-subtle" />
                 <div className={cn("w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center", "bg-gradient-to-br from-crypto-blue to-blue-400", "shadow-2xl shadow-crypto-blue/20", "animate-float")}>
-                  <div className="text-white text-6xl md:text-7xl font-bold">Ӿ</div>
+                  <div className="text-white text-8xl md:text-9xl font-bold flex items-center justify-center w-full h-full">Ӿ</div>
                 </div>
                 
                 {/* Performance indicator */}
