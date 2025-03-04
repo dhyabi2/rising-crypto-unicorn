@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Github, Twitter, MessageSquare } from "lucide-react";
+import { Menu, X, Github, Twitter, MessageSquare, LineChart } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
@@ -24,7 +24,8 @@ const Navbar = () => {
   const socialLinks = [
     { name: "GitHub", icon: <Github size={20} />, url: "https://github.com/nanocurrency/nano-node" },
     { name: "X", icon: <Twitter size={20} />, url: "https://x.com/nano" },
-    { name: "Reddit", icon: <MessageSquare size={20} />, url: "https://www.reddit.com/r/nanocurrency/" }
+    { name: "Reddit", icon: <MessageSquare size={20} />, url: "https://www.reddit.com/r/nanocurrency/" },
+    { name: "CoinMarketCap", icon: <LineChart size={20} />, url: "https://coinmarketcap.com/currencies/nano/" }
   ];
 
   return (

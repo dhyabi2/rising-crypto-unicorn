@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import RatingsTable from '@/components/RatingsTable';
 import Reasons from '@/components/Reasons';
+import GrokConclusion from '@/components/GrokConclusion';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 
@@ -39,6 +40,7 @@ const Index = () => {
       <Features />
       <RatingsTable />
       <Reasons />
+      <GrokConclusion />
       <CTA />
       <Footer />
     </div>
