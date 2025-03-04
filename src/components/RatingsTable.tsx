@@ -43,7 +43,7 @@ const RatingsTable = () => {
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-4">
             <span className="text-sm font-medium text-crypto-charcoal">Comparative Analysis</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-crypto-charcoal mb-4">Cryptocurrency Performance Rating</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-crypto-charcoal mb-4">Crypto Made in USA Rating</h2>
           <p className="text-lg text-crypto-charcoal/70 max-w-2xl mx-auto">
             See how Nano (XNO) compares to other major cryptocurrencies across key technical metrics.
           </p>
@@ -152,7 +152,7 @@ const RatingsTable = () => {
         </div>
         
         <div className="text-center mt-6 text-sm text-crypto-charcoal/60">
-          <p>Ratings based on technical specifications and performance metrics as of 2023.</p>
+          <p>Ratings based on technical specifications and performance metrics as of 2025.</p>
         </div>
       </div>
     </section>
