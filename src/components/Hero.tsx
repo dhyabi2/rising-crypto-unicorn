@@ -1,12 +1,9 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { TrendingUp, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-
 const Hero = () => {
-  return (
-    <section className="relative pt-20 pb-20 overflow-hidden">
+  return <section className="relative pt-20 pb-20 overflow-hidden">
       {/* Background with subtle gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-white to-blue-50/50 -z-10" />
       
@@ -37,17 +34,10 @@ const Hero = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  className="bg-crypto-blue hover:bg-crypto-blue/90 text-white rounded-full px-8 py-6 text-lg font-medium shadow-lg shadow-blue-300/20 transition-all hover:shadow-xl hover:shadow-blue-300/30"
-                  onClick={() => window.open("https://hub.nano.org/trading", "_blank")}
-                >
+                <Button className="bg-crypto-blue hover:bg-crypto-blue/90 text-white rounded-full px-8 py-6 text-lg font-medium shadow-lg shadow-blue-300/20 transition-all hover:shadow-xl hover:shadow-blue-300/30" onClick={() => window.open("https://hub.nano.org/trading", "_blank")}>
                   Get Nano
                 </Button>
-                <Button 
-                  variant="outline" 
-                  className="border-crypto-blue text-crypto-blue hover:bg-crypto-blue/5 rounded-full px-8 py-6 text-lg font-medium transition-all"
-                  onClick={() => window.open("https://nano.org", "_blank")}
-                >
+                <Button variant="outline" className="border-crypto-blue text-crypto-blue hover:bg-crypto-blue/5 rounded-full px-8 py-6 text-lg font-medium transition-all" onClick={() => window.open("https://nano.org", "_blank")}>
                   Learn More
                   <ArrowUpRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -58,13 +48,8 @@ const Hero = () => {
             <div className="w-full md:w-1/2 flex justify-center animate-fade-in">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-crypto-gold to-crypto-light-gold rounded-full blur-xl opacity-20 animate-pulse-subtle" />
-                <div className={cn(
-                  "w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center",
-                  "bg-gradient-to-br from-crypto-blue to-blue-400",
-                  "shadow-2xl shadow-crypto-blue/20",
-                  "animate-float"
-                )}>
-                  <div className="text-white text-6xl md:text-7xl font-bold">XNO</div>
+                <div className={cn("w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center", "bg-gradient-to-br from-crypto-blue to-blue-400", "shadow-2xl shadow-crypto-blue/20", "animate-float")}>
+                  <div className="text-white text-6xl md:text-7xl font-bold">Ӿ</div>
                 </div>
                 
                 {/* Performance indicator */}
@@ -79,8 +64,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
