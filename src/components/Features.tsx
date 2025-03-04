@@ -7,14 +7,12 @@ const FeatureCard = ({
   icon, 
   title, 
   description, 
-  delay,
-  arabicText
+  delay
 }: { 
   icon: React.ReactNode; 
   title: string; 
   description: string;
   delay: string;
-  arabicText?: string;
 }) => (
   <div 
     className={cn(
@@ -30,9 +28,6 @@ const FeatureCard = ({
     </div>
     <h3 className="text-xl font-semibold text-crypto-charcoal mb-3">{title}</h3>
     <p className="text-crypto-charcoal/70 mb-4">{description}</p>
-    {arabicText && (
-      <p className="dir-rtl text-crypto-charcoal/80 font-arabic">{arabicText}</p>
-    )}
   </div>
 );
 
@@ -59,7 +54,6 @@ const Features = () => {
             icon={<Ban size={24} />}
             title="Zero Fees"
             description="Nano transactions are completely free, making it perfect for everyday transactions regardless of size."
-            arabicText="لا يوجد بها تعدين اي انه لا ممكن الحصول ع عملات غيرها بالسوق"
             delay="0ms"
           />
           <FeatureCard 
@@ -72,7 +66,6 @@ const Features = () => {
             icon={<Globe size={24} />}
             title="Eco-Friendly"
             description="Uses minimal energy with no mining required, making it one of the most environmentally sustainable cryptocurrencies."
-            arabicText="ولا تتضخم"
             delay="200ms"
           />
           <FeatureCard 
