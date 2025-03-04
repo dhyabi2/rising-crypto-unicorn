@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Twitter, MessageSquare } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
@@ -20,6 +20,12 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const socialLinks = [
+    { name: "GitHub", icon: <Github size={20} />, url: "https://github.com/nanocurrency/nano-node" },
+    { name: "X", icon: <Twitter size={20} />, url: "https://x.com/nano" },
+    { name: "Reddit", icon: <MessageSquare size={20} />, url: "https://www.reddit.com/r/nanocurrency/" }
+  ];
 
   return (
     <header 
@@ -45,6 +51,23 @@ const Navbar = () => {
           <a href="https://nano.org/en/sustainability" className="text-crypto-charcoal hover:text-crypto-blue transition-colors duration-200">
             Reasons
           </a>
+          
+          {/* Social Links */}
+          <div className="flex items-center space-x-4">
+            {socialLinks.map((link) => (
+              <a 
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-crypto-charcoal hover:text-crypto-blue transition-colors duration-200"
+                title={link.name}
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
+          
           <Button className="bg-crypto-blue hover:bg-crypto-blue/90 text-white rounded-full px-6" onClick={() => window.open("https://hub.nano.org/trading", "_blank")}>
             Buy Now
           </Button>
@@ -82,6 +105,27 @@ const Navbar = () => {
           >
             Reasons
           </a>
+          
+          {/* Social Links */}
+          <div className="flex items-center space-x-6 my-4">
+            {socialLinks.map((link) => (
+              <a 
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl text-crypto-charcoal hover:text-crypto-blue transition-colors duration-200"
+                title={link.name}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <div className="flex flex-col items-center">
+                  {link.icon}
+                  <span className="text-sm mt-1">{link.name}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+          
           <Button 
             className="w-full bg-crypto-blue hover:bg-crypto-blue/90 text-white rounded-full px-6 mt-4"
             onClick={() => {
