@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -32,11 +33,18 @@ const CTA = () => {
                   This currency continues to rise above major currencies and has no mining
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-crypto-blue hover:bg-crypto-blue/90 text-white rounded-full px-8 py-6 text-lg font-medium shadow-lg hover:shadow-xl transition-all">
+                  <Button 
+                    className="bg-crypto-blue hover:bg-crypto-blue/90 text-white rounded-full px-8 py-6 text-lg font-medium shadow-lg hover:shadow-xl transition-all"
+                    onClick={() => window.open("https://hub.nano.org/trading", "_blank")}
+                  >
                     Get Nano
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                  <Button variant="outline" className="border-crypto-charcoal text-crypto-charcoal hover:bg-crypto-charcoal/5 rounded-full px-8 py-6 text-lg font-medium">
+                  <Button 
+                    variant="outline" 
+                    className="border-crypto-charcoal text-crypto-charcoal hover:bg-crypto-charcoal/5 rounded-full px-8 py-6 text-lg font-medium"
+                    onClick={() => window.open("https://hub.nano.org/trading", "_blank")}
+                  >
                     View Exchanges
                   </Button>
                 </div>

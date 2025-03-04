@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { TrendingUp, ArrowUpRight } from "lucide-react";
@@ -36,10 +37,17 @@ const Hero = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-crypto-blue hover:bg-crypto-blue/90 text-white rounded-full px-8 py-6 text-lg font-medium shadow-lg shadow-blue-300/20 transition-all hover:shadow-xl hover:shadow-blue-300/30">
+                <Button 
+                  className="bg-crypto-blue hover:bg-crypto-blue/90 text-white rounded-full px-8 py-6 text-lg font-medium shadow-lg shadow-blue-300/20 transition-all hover:shadow-xl hover:shadow-blue-300/30"
+                  onClick={() => window.open("https://hub.nano.org/trading", "_blank")}
+                >
                   Get Nano
                 </Button>
-                <Button variant="outline" className="border-crypto-blue text-crypto-blue hover:bg-crypto-blue/5 rounded-full px-8 py-6 text-lg font-medium transition-all">
+                <Button 
+                  variant="outline" 
+                  className="border-crypto-blue text-crypto-blue hover:bg-crypto-blue/5 rounded-full px-8 py-6 text-lg font-medium transition-all"
+                  onClick={() => window.open("https://nano.org", "_blank")}
+                >
                   Learn More
                   <ArrowUpRight className="ml-2 h-4 w-4" />
                 </Button>

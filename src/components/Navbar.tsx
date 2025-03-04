@@ -33,22 +33,19 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center">
           <span className="text-2xl font-bold text-crypto-charcoal">
-            <span className="text-crypto-blue">Crypto</span>Rise
+            <span className="text-crypto-blue">Know</span>XNO
           </span>
         </div>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-crypto-charcoal hover:text-crypto-blue transition-colors duration-200">
+          <a href="https://nano.org/en" className="text-crypto-charcoal hover:text-crypto-blue transition-colors duration-200">
             Features
           </a>
-          <a href="#growth" className="text-crypto-charcoal hover:text-crypto-blue transition-colors duration-200">
-            Growth
-          </a>
-          <a href="#reasons" className="text-crypto-charcoal hover:text-crypto-blue transition-colors duration-200">
+          <a href="https://nano.org/en/sustainability" className="text-crypto-charcoal hover:text-crypto-blue transition-colors duration-200">
             Reasons
           </a>
-          <Button className="bg-crypto-blue hover:bg-crypto-blue/90 text-white rounded-full px-6">
+          <Button className="bg-crypto-blue hover:bg-crypto-blue/90 text-white rounded-full px-6" onClick={() => window.open("https://hub.nano.org/trading", "_blank")}>
             Buy Now
           </Button>
         </nav>
@@ -72,21 +69,14 @@ const Navbar = () => {
       >
         <nav className="flex flex-col items-center space-y-6 p-6">
           <a 
-            href="#features" 
+            href="https://nano.org/en" 
             className="text-xl text-crypto-charcoal hover:text-crypto-blue transition-colors duration-200"
             onClick={() => setMobileMenuOpen(false)}
           >
             Features
           </a>
           <a 
-            href="#growth" 
-            className="text-xl text-crypto-charcoal hover:text-crypto-blue transition-colors duration-200"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Growth
-          </a>
-          <a 
-            href="#reasons" 
+            href="https://nano.org/en/sustainability" 
             className="text-xl text-crypto-charcoal hover:text-crypto-blue transition-colors duration-200"
             onClick={() => setMobileMenuOpen(false)}
           >
@@ -94,7 +84,10 @@ const Navbar = () => {
           </a>
           <Button 
             className="w-full bg-crypto-blue hover:bg-crypto-blue/90 text-white rounded-full px-6 mt-4"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={() => {
+              setMobileMenuOpen(false);
+              window.open("https://hub.nano.org/trading", "_blank");
+            }}
           >
             Buy Now
           </Button>

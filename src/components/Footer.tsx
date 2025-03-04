@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           {/* Logo and description */}
           <div className="col-span-1 md:col-span-2">
             <div className="text-2xl font-bold text-crypto-charcoal mb-4">
-              <span className="text-crypto-blue">Crypto</span>Rise
+              <span className="text-crypto-blue">Know</span>XNO
             </div>
             <p className="text-crypto-charcoal/70 max-w-md mb-6">
               A revolutionary cryptocurrency with unique properties that drive unprecedented growth and market performance.
@@ -25,22 +26,17 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-crypto-charcoal mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#features" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
+                <a href="https://nano.org/en" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
                   Features
                 </a>
               </li>
               <li>
-                <a href="#growth" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
-                  Growth Chart
+                <a href="https://nano.org/en/sustainability" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
+                  Reasons
                 </a>
               </li>
               <li>
-                <a href="#reasons" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
-                  Secret Reasons
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
+                <a href="https://hub.nano.org/trading" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
                   Buy Now
                 </a>
               </li>
@@ -52,24 +48,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-crypto-charcoal mb-4">Legal</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
+                <Link to="/terms" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
                   Terms & Conditions
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
+                <Link to="/privacy" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
+                <Link to="/risk" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
                   Risk Disclosure
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-crypto-charcoal/70 hover:text-crypto-blue transition-colors">
-                  Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -80,7 +71,7 @@ const Footer = () => {
           "flex flex-col md:flex-row justify-between items-center"
         )}>
           <p className="text-crypto-charcoal/60 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} CryptoRise. All rights reserved.
+            © {new Date().getFullYear()} KnowXNO. All rights reserved.
           </p>
           <div className="text-crypto-charcoal/60 text-sm">
             <p>This is a demonstration website. Not financial advice.</p>

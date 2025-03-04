@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Zap, Leaf, Scale, ArrowUpDown } from 'lucide-react';
+import { Zap, Leaf, Scale, ArrowUpDown, Shield, Globe, Clock, Cpu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const ReasonCard = ({ 
@@ -59,7 +59,7 @@ const Reasons = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ReasonCard 
             number="01"
             icon={<Leaf size={28} />}
@@ -90,6 +90,34 @@ const Reasons = () => {
             title="Asynchronous Processing"
             description="Transactions are processed independently and asynchronously, allowing the network to scale efficiently while maintaining high throughput and low latency."
             delay="300ms"
+          />
+          <ReasonCard 
+            number="05"
+            icon={<Shield size={28} />}
+            title="Delegated Proof of Stake"
+            description="Nano's security model uses delegated validation where users can choose representatives to validate transactions on their behalf without locking up their funds."
+            delay="400ms"
+          />
+          <ReasonCard 
+            number="06"
+            icon={<Globe size={28} />}
+            title="Global Accessibility"
+            description="Designed for worldwide adoption with a focus on inclusivity, allowing anyone with internet access to participate regardless of economic status."
+            delay="500ms"
+          />
+          <ReasonCard 
+            number="07"
+            icon={<Clock size={28} />}
+            title="Real-Time Settlement"
+            description="Transactions are fully settled in under a second, making Nano suitable for point-of-sale applications and micropayments where speed matters."
+            delay="600ms"
+          />
+          <ReasonCard 
+            number="08"
+            icon={<Cpu size={28} />}
+            title="Minimal Resource Requirements"
+            description="Designed to run on low-power devices, Nano's network can operate efficiently on hardware with minimal processing power and memory."
+            delay="700ms"
           />
         </div>
       </div>
