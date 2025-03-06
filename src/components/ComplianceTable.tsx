@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ArrowUpDown, Leaf, Battery, AlertTriangle, Waves, TrendingUp, Shield, Network, Maximize } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -45,10 +44,8 @@ const ComplianceTable = () => {
 
   const handleSort = (field: keyof CryptoCompliance) => {
     if (sortField === field) {
-      // Toggle direction if same field
       setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
     } else {
-      // New field, set to descending by default
       setSortField(field);
       setSortDirection('desc');
     }
@@ -65,7 +62,6 @@ const ComplianceTable = () => {
     }
   });
 
-  // Function to get cell background color based on rating
   const getRatingColor = (rating: number) => {
     if (rating === 5) return 'bg-green-100';
     if (rating === 4) return 'bg-green-50';
@@ -74,7 +70,6 @@ const ComplianceTable = () => {
     return 'bg-red-50';
   };
 
-  // Get icon and title for each column
   const columnConfig = {
     ecoFriendliness: { icon: <Leaf className="w-3 h-3" />, title: 'Eco-Friendliness' },
     energyConsumption: { icon: <Battery className="w-3 h-3" />, title: 'Energy Consumption' },
@@ -88,7 +83,6 @@ const ComplianceTable = () => {
 
   return (
     <section id="compliance" className="py-20 relative">
-      {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-green-100/40 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-blue-100/40 rounded-full blur-3xl -z-10" />
       
@@ -136,14 +130,9 @@ const ComplianceTable = () => {
             </thead>
             <tbody>
               {sortedData.map((crypto) => {
-                // Highlight XNO row with green-50 background, but not the cell
-                const isXNO = crypto.crypto === "XNO";
                 const isHighScore = crypto.totalScore >= 35;
                 
-                const rowClass = cn(
-                  "border-b hover:bg-gray-50 transition-colors",
-                  isXNO ? "bg-green-50" : isHighScore ? "bg-blue-50/30" : ""
-                );
+                const rowClass = isHighScore ? "border-b hover:bg-gray-50 transition-colors bg-blue-50/30" : "border-b hover:bg-gray-50 transition-colors";
 
                 return (
                   <tr key={crypto.crypto} className={rowClass}>
