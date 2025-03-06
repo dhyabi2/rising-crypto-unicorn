@@ -148,7 +148,7 @@ const ComplianceTable = () => {
                 return (
                   <tr key={crypto.crypto} className={rowClass}>
                     <td className="px-4 py-3 font-medium sticky left-0 bg-inherit z-10">
-                      {isXNO ? <span className="text-green-600 font-bold">{crypto.crypto}</span> : crypto.crypto}
+                      {crypto.crypto}
                     </td>
                     {Object.keys(columnConfig).map((key) => (
                       <td 
