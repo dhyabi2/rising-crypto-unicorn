@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import RatingsTable from '@/components/RatingsTable';
+import ComplianceTable from '@/components/ComplianceTable';
 import Reasons from '@/components/Reasons';
 import GrokConclusion from '@/components/GrokConclusion';
 import CTA from '@/components/CTA';
@@ -39,6 +40,7 @@ const Index = () => {
       <Hero />
       <Features />
       <RatingsTable />
+      <ComplianceTable />
       <Reasons />
       <GrokConclusion />
       <CTA />
