@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ArrowUpDown, Leaf, Battery, AlertTriangle, Waves, TrendingUp, Shield, Network, Maximize } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -42,9 +41,6 @@ const ComplianceTable = () => {
     { crypto: "FIL", ecoFriendliness: 3, energyConsumption: 3, miningIssues: 3, environmentalImpact: 3, inflationHedge: 3, security: 5, decentralization: 5, scalability: 4, totalScore: 29 },
     { crypto: "FLOW", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 2, security: 5, decentralization: 3, scalability: 5, totalScore: 35 },
   ];
-
-  // Sort the crypto data by default in descending order by totalScore
-  const sortedCryptoData = [...cryptoData].sort((a, b) => b.totalScore - a.totalScore);
 
   const handleSort = (field: keyof CryptoCompliance) => {
     if (sortField === field) {
@@ -102,9 +98,6 @@ const ComplianceTable = () => {
         </div>
         
         <div className="overflow-x-auto glass-card rounded-2xl p-6 shadow-lg animate-scale-up">
-          <div className="mb-4 px-4">
-            <h3 className="text-lg font-medium text-crypto-charcoal">Sorted by Total Score (Highest to Lowest)</h3>
-          </div>
           <table className="w-full min-w-[800px] text-sm text-left">
             <thead className="text-xs uppercase bg-gray-50 text-crypto-charcoal">
               <tr>
@@ -136,7 +129,7 @@ const ComplianceTable = () => {
               </tr>
             </thead>
             <tbody>
-              {sortedCryptoData.map((crypto, index) => {
+              {sortedData.map((crypto) => {
                 const isHighScore = crypto.totalScore >= 35;
                 
                 const rowClass = isHighScore ? "border-b hover:bg-gray-50 transition-colors bg-blue-50/30" : "border-b hover:bg-gray-50 transition-colors";
