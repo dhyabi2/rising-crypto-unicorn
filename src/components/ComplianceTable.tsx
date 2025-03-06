@@ -20,8 +20,6 @@ const ComplianceTable = () => {
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
 
   const cryptoData: CryptoCompliance[] = [
-    { crypto: "BTC", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 5, security: 5, decentralization: 5, scalability: 2, totalScore: 21 },
-    { crypto: "ETH", ecoFriendliness: 1, energyConsumption: 2, miningIssues: 1, environmentalImpact: 1, inflationHedge: 3, security: 4, decentralization: 4, scalability: 3, totalScore: 19 },
     { crypto: "XRP", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 5, security: 4, decentralization: 1, scalability: 5, totalScore: 35 },
     { crypto: "XLM", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 3, security: 4, decentralization: 2, scalability: 5, totalScore: 34 },
     { crypto: "LTC", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 5, security: 5, decentralization: 5, scalability: 2, totalScore: 21 },
