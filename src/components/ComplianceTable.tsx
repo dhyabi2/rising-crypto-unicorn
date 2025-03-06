@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ArrowUpDown, Leaf, Battery, AlertTriangle, Waves, TrendingUp, Scale, Shield, Network, Maximize } from 'lucide-react';
+import { ArrowUpDown, Leaf, Battery, AlertTriangle, Waves, TrendingUp, Shield, Network, Maximize } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface CryptoCompliance {
@@ -10,7 +10,6 @@ interface CryptoCompliance {
   miningIssues: number;
   environmentalImpact: number;
   inflationHedge: number;
-  compliance: number;
   security: number;
   decentralization: number;
   scalability: number;
@@ -22,26 +21,26 @@ const ComplianceTable = () => {
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
 
   const cryptoData: CryptoCompliance[] = [
-    { crypto: "BTC", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 5, compliance: 3, security: 5, decentralization: 5, scalability: 2, totalScore: 24 },
-    { crypto: "ETH", ecoFriendliness: 1, energyConsumption: 2, miningIssues: 1, environmentalImpact: 1, inflationHedge: 3, compliance: 3, security: 4, decentralization: 4, scalability: 3, totalScore: 22 },
-    { crypto: "XRP", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 5, compliance: 5, security: 4, decentralization: 1, scalability: 5, totalScore: 40 },
-    { crypto: "XLM", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 3, compliance: 5, security: 4, decentralization: 2, scalability: 5, totalScore: 39 },
-    { crypto: "LTC", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 5, compliance: 3, security: 5, decentralization: 5, scalability: 2, totalScore: 24 },
-    { crypto: "BCH", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 5, compliance: 3, security: 5, decentralization: 4, scalability: 3, totalScore: 24 },
-    { crypto: "ZEC", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 5, compliance: 2, security: 5, decentralization: 5, scalability: 2, totalScore: 23 },
-    { crypto: "DASH", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 2, compliance: 2, security: 5, decentralization: 3, scalability: 4, totalScore: 20 },
-    { crypto: "DCR", ecoFriendliness: 2, energyConsumption: 2, miningIssues: 3, environmentalImpact: 3, inflationHedge: 2, compliance: 3, security: 5, decentralization: 5, scalability: 2, totalScore: 27 },
-    { crypto: "ZEN", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 2, compliance: 2, security: 5, decentralization: 5, scalability: 2, totalScore: 20 },
-    { crypto: "SC", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 1, compliance: 2, security: 5, decentralization: 5, scalability: 2, totalScore: 19 },
-    { crypto: "XNO", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 5, compliance: 2, security: 4, decentralization: 4, scalability: 5, totalScore: 40 },
-    { crypto: "ALGO", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 5, compliance: 4, security: 5, decentralization: 3, scalability: 5, totalScore: 42 },
-    { crypto: "HBAR", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 5, compliance: 5, security: 5, decentralization: 1, scalability: 5, totalScore: 41 },
-    { crypto: "AVAX", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 4, compliance: 2, security: 5, decentralization: 5, scalability: 5, totalScore: 41 },
-    { crypto: "SOL", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 3, compliance: 2, security: 3, decentralization: 3, scalability: 5, totalScore: 36 },
-    { crypto: "LUNA", ecoFriendliness: 4, energyConsumption: 4, miningIssues: 5, environmentalImpact: 5, inflationHedge: 1, compliance: 1, security: 2, decentralization: 3, scalability: 5, totalScore: 30 },
-    { crypto: "ATOM", ecoFriendliness: 4, energyConsumption: 4, miningIssues: 5, environmentalImpact: 5, inflationHedge: 2, compliance: 3, security: 5, decentralization: 5, scalability: 5, totalScore: 38 },
-    { crypto: "FIL", ecoFriendliness: 3, energyConsumption: 3, miningIssues: 3, environmentalImpact: 3, inflationHedge: 3, compliance: 3, security: 5, decentralization: 5, scalability: 4, totalScore: 32 },
-    { crypto: "FLOW", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 2, compliance: 3, security: 5, decentralization: 3, scalability: 5, totalScore: 38 },
+    { crypto: "BTC", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 5, security: 5, decentralization: 5, scalability: 2, totalScore: 21 },
+    { crypto: "ETH", ecoFriendliness: 1, energyConsumption: 2, miningIssues: 1, environmentalImpact: 1, inflationHedge: 3, security: 4, decentralization: 4, scalability: 3, totalScore: 19 },
+    { crypto: "XRP", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 5, security: 4, decentralization: 1, scalability: 5, totalScore: 35 },
+    { crypto: "XLM", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 3, security: 4, decentralization: 2, scalability: 5, totalScore: 34 },
+    { crypto: "LTC", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 5, security: 5, decentralization: 5, scalability: 2, totalScore: 21 },
+    { crypto: "BCH", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 5, security: 5, decentralization: 4, scalability: 3, totalScore: 21 },
+    { crypto: "ZEC", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 5, security: 5, decentralization: 5, scalability: 2, totalScore: 21 },
+    { crypto: "DASH", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 2, security: 5, decentralization: 3, scalability: 4, totalScore: 18 },
+    { crypto: "DCR", ecoFriendliness: 2, energyConsumption: 2, miningIssues: 3, environmentalImpact: 3, inflationHedge: 2, security: 5, decentralization: 5, scalability: 2, totalScore: 24 },
+    { crypto: "ZEN", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 2, security: 5, decentralization: 5, scalability: 2, totalScore: 18 },
+    { crypto: "SC", ecoFriendliness: 1, energyConsumption: 1, miningIssues: 1, environmentalImpact: 1, inflationHedge: 1, security: 5, decentralization: 5, scalability: 2, totalScore: 17 },
+    { crypto: "XNO", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 5, security: 4, decentralization: 4, scalability: 5, totalScore: 38 },
+    { crypto: "ALGO", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 5, security: 5, decentralization: 3, scalability: 5, totalScore: 38 },
+    { crypto: "HBAR", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 5, security: 5, decentralization: 1, scalability: 5, totalScore: 36 },
+    { crypto: "AVAX", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 4, security: 5, decentralization: 5, scalability: 5, totalScore: 39 },
+    { crypto: "SOL", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 3, security: 3, decentralization: 3, scalability: 5, totalScore: 34 },
+    { crypto: "LUNA", ecoFriendliness: 4, energyConsumption: 4, miningIssues: 5, environmentalImpact: 5, inflationHedge: 1, security: 2, decentralization: 3, scalability: 5, totalScore: 29 },
+    { crypto: "ATOM", ecoFriendliness: 4, energyConsumption: 4, miningIssues: 5, environmentalImpact: 5, inflationHedge: 2, security: 5, decentralization: 5, scalability: 5, totalScore: 35 },
+    { crypto: "FIL", ecoFriendliness: 3, energyConsumption: 3, miningIssues: 3, environmentalImpact: 3, inflationHedge: 3, security: 5, decentralization: 5, scalability: 4, totalScore: 29 },
+    { crypto: "FLOW", ecoFriendliness: 5, energyConsumption: 5, miningIssues: 5, environmentalImpact: 5, inflationHedge: 2, security: 5, decentralization: 3, scalability: 5, totalScore: 35 },
   ];
 
   const handleSort = (field: keyof CryptoCompliance) => {
@@ -60,9 +59,9 @@ const ComplianceTable = () => {
     const bValue = b[sortField];
     
     if (sortDirection === 'asc') {
-      return aValue - bValue;
+      return aValue < bValue ? -1 : aValue > bValue ? 1 : 0;
     } else {
-      return bValue - aValue;
+      return bValue < aValue ? -1 : bValue > aValue ? 1 : 0;
     }
   });
 
@@ -82,7 +81,6 @@ const ComplianceTable = () => {
     miningIssues: { icon: <AlertTriangle className="w-3 h-3" />, title: 'Mining Issues' },
     environmentalImpact: { icon: <Waves className="w-3 h-3" />, title: 'Environmental Impact' },
     inflationHedge: { icon: <TrendingUp className="w-3 h-3" />, title: 'Inflation Hedge' },
-    compliance: { icon: <Scale className="w-3 h-3" />, title: 'Compliance' },
     security: { icon: <Shield className="w-3 h-3" />, title: 'Security' },
     decentralization: { icon: <Network className="w-3 h-3" />, title: 'Decentralization' },
     scalability: { icon: <Maximize className="w-3 h-3" />, title: 'Scalability' },
@@ -97,11 +95,11 @@ const ComplianceTable = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16 animate-slide-up">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-50 border border-green-100 mb-4">
-            <span className="text-sm font-medium text-crypto-charcoal">Sustainability & Compliance</span>
+            <span className="text-sm font-medium text-crypto-charcoal">Sustainability & Eco-Friendliness</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-crypto-charcoal mb-4">Cryptocurrency Compliance & Eco-Friendliness</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-crypto-charcoal mb-4">Cryptocurrency Environmental Impact</h2>
           <p className="text-lg text-crypto-charcoal/70 max-w-2xl mx-auto">
-            Compare cryptocurrencies based on their environmental impact, regulatory compliance, and adoption potential.
+            Compare cryptocurrencies based on their environmental impact and adoption potential.
           </p>
         </div>
         
@@ -140,7 +138,7 @@ const ComplianceTable = () => {
               {sortedData.map((crypto) => {
                 // Highlight XNO row
                 const isXNO = crypto.crypto === "XNO";
-                const isHighScore = crypto.totalScore >= 40;
+                const isHighScore = crypto.totalScore >= 35;
                 
                 const rowClass = cn(
                   "border-b hover:bg-gray-50 transition-colors",
@@ -165,8 +163,8 @@ const ComplianceTable = () => {
                     ))}
                     <td className={cn(
                       "px-4 py-3 text-center font-bold",
-                      crypto.totalScore >= 40 ? "text-green-600" : 
-                      crypto.totalScore >= 35 ? "text-blue-600" :
+                      crypto.totalScore >= 35 ? "text-green-600" : 
+                      crypto.totalScore >= 30 ? "text-blue-600" :
                       "text-gray-600"
                     )}>
                       {crypto.totalScore}
@@ -179,7 +177,7 @@ const ComplianceTable = () => {
         </div>
         
         <div className="text-center mt-6 text-sm text-crypto-charcoal/60">
-          <p>Ratings based on current market data, regulatory compliance, and environmental impact metrics.</p>
+          <p>Ratings based on current market data and environmental impact metrics.</p>
         </div>
       </div>
     </section>
