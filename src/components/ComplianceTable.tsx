@@ -136,7 +136,7 @@ const ComplianceTable = () => {
             </thead>
             <tbody>
               {sortedData.map((crypto) => {
-                // Highlight XNO row
+                // Highlight XNO row with green-50 background, but not the cell
                 const isXNO = crypto.crypto === "XNO";
                 const isHighScore = crypto.totalScore >= 35;
                 
